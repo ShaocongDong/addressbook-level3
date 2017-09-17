@@ -61,7 +61,9 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
 `* *` | user | hide [private contact details](#private-contact-detail) by default | minimize chance of someone else seeing them by accident
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
-
+`*` | user with at least one person in address book | update person record | edit a person and update his record
+`*` | user with at least one person in address book | add photos to the person | see and identify different persons inside easily
+`*` | user with at least one person in address book | add location picture to the person | easily see the details of this person's location
 
 ## Appendix B : Use Cases
 
@@ -87,6 +89,25 @@ Use case ends.
 
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
+
+#### Use case: Rename tag
+**MSS**
+
+1. User requests to rename a tag (eg. from `friends` to `buddies`)
+2. AddressBook shows message to confirm with this action
+3. User confirms to change this tag
+4. AddressBook updates records by updating all `friends` to `buddies` if any `friends` tag is present
+
+**Extensions**
+
+2a. The person list is empty
+
+> Use case ends
+
+3a. The given tag is invalid
+
+> 3a1. AddressBook shows an error message <br>
+> 3a2. Use case ends
 
 ## Appendix C : Non Functional Requirements
 
