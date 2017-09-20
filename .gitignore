@@ -23,3 +23,8 @@ publish.sh
 build/
 
 src/seedu/addressbook/testLambda.java
+
+# VSCode
+.classpath
+.project
+.settings/
